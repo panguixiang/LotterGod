@@ -24,7 +24,7 @@
 
 	<servlet-mapping>
 		<servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
-		<url-pattern>/java/*</url-pattern>
+		<url-pattern>/api/*</url-pattern>
 	</servlet-mapping>
 
 
@@ -50,11 +50,10 @@
 	
 	<servlet>
 		<servlet-name>InitCacheServlet</servlet-name>
-		<servlet-class>com.yc.music.context.InitCacheServlet</servlet-class>
+		<servlet-class>com.lotter.api.context.ApiCacheServlet</servlet-class>
 		<init-param>
 			<param-name>redisConfig</param-name>
 			<param-value>127.0.0.1,7359,300,100,1</param-value>
-			<!-- <param-value>10.25.168.138,7359,300,100,1</param-value> 生产redis-->
 		</init-param>
 	   <load-on-startup>2</load-on-startup>
 	</servlet>
